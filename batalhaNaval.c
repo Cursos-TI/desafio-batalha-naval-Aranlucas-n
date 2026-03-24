@@ -14,11 +14,23 @@ int main() {
     int naviohori [3]= {3,3,3};
     int navioverti [3]= {3,3,3};
     // Cordenadas
-    int linhahori = 2, colunahori = 6;
-    int linhavertical = 2, colunavertical = 4;
+    int linhahori, colunahori;
+    int linhavertical, colunavertical;
     // Variavel para só mostrar a tabela se não tiver erro
     int erro = 0;
 
+    printf("### Jogo de Batalha Naval ###\n\n");
+    // Solcitar entrada de dados do usuario
+    printf("Digite a linha do navio horizontal (0 a 9): ");
+    scanf("%d", &linhahori);
+    printf("Digite coluna do navio horizontal (0 a 9): ");
+    scanf("%d", &colunahori);
+
+    printf("Digite a linha do navio vertical (0 a 9): ");
+    scanf("%d", &linhavertical);
+    printf("Digite a coluna do navio vertical (0 a 9):");
+    scanf("%d", &colunavertical);
+    printf("\n");
 
     // Iniciando tudo com 0 representando água
     for (i = 0; i < 10; i++)
