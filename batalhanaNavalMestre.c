@@ -169,7 +169,7 @@ int main(){
             cruz[i][j] = 0;
         }
     }
-    //Ocataedro
+    //Octaedro
     for (int i = 0; i < 5; i++){
         for (int j = 0; j < 5; j++){
             
@@ -200,7 +200,7 @@ int main(){
                 tabuleiro[l][c] = 5;
         } 
       }
-      // CRUZ
+            //CRUZ
             l = linhaCruz + i - 2;
             c = colunaCruz + j - 2;
 
@@ -210,11 +210,11 @@ int main(){
             }
         }
 
-        // OCTAEDRO
-        l = linhaOct + i - 2;
-        c = colunaOct + j - 2;
+            // OCTAEDRO
+            l = linhaOct + i - 2;
+            c = colunaOct + j - 2;
 
-        if (l >= 0 && l < linha && c >= 0 && c < coluna){
+            if (l >= 0 && l < linha && c >= 0 && c < coluna){
             if (octaedro[i][j] == 1 && tabuleiro[l][c] == 0){
                 tabuleiro[l][c] = 5;
             }
@@ -222,10 +222,7 @@ int main(){
     }
   } 
 
-
-    
-
-    // Mostrando o tabuleiro
+    // Imprimir o tabuleiro
 
     if(erro == 0){
         printf("   ");
