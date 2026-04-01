@@ -25,21 +25,51 @@ int main(){
     printf("### Jogo de Batalha Naval ###\n\n");
 
     // Solcitar entrada de dados do usuario
+    // Laço de repetição
+   while (1){
     printf("Digite a linha e a coluna do navio 1 horizontal (0 a 9) dois valores:");
     scanf("%d %d", &linhahori, &colunahori);
+    if (linhahori >= 0 && linhahori < linha && colunahori >= 0 && colunahori + 2 < coluna){
+        break; // Laço completo, sai do laço
+    }else{
+        printf("Posição incorreta! Digite uma posição valida.\n"); //Se apresentar erro ele repete o laço até uma opção valida
+        } 
+    }
 
+    while(1){
     printf("Digite a linha e a coluna do navio 2 vertical (0 a 9) dois valores:");
     scanf("%d %d", &linhavertical, &colunavertical);
+    if(linhavertical >= 0 && linhavertical + 2 < linha && colunavertical >= 0 && colunavertical < coluna){
+        break;
+    }else{ 
+        printf("Posição incorreta! Digite uma posição valida.\n");
+        }
+    }
 
+    while(1){
     printf("Digite a linha e a coluna do navio 3 diagonal (\\)(0 a 9) dois valores:");
     scanf("%d %d", &linhadiagonal1, &colunadiagonal1);
+    if(linhadiagonal1 >= 0 && linhadiagonal1 < linha &&
+        colunadiagonal1 >= 0 && colunadiagonal1 < coluna &&
+        linhadiagonal1 + 2 < linha && colunadiagonal1 + 2 < coluna) {
+        break;
+    }else{
+        printf("Posição incorreta! Digite uma posição valida.\n");
+        }
+    }
 
+    while(1){
     printf("Digite a linha e a coluna do navio 4 diagonal (/)(0 a 9) dois valores:");
     scanf("%d %d", &linhadiagonal2, &colunadiagonal2);
-   
+    if (linhadiagonal2 >= 0 && linhadiagonal2 < linha &&
+        colunadiagonal2 >= 0 && colunadiagonal2 < coluna &&
+        linhadiagonal2 + 2 < linha && colunadiagonal2 - 2 >= 0) {
+        break;
+    }else{
+        printf("Posição incorreta! Digite uma posição valida.\n");
+    } 
+}
     printf("\n");
-
-
 
     // Iniciando tudo com 0 representando água
     for (int i = 0; i < linha; i++) {
