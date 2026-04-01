@@ -32,8 +32,8 @@ int main(){
     if (linhahori >= 0 && linhahori < linha && colunahori >= 0 && colunahori + 2 < coluna){
         break; // Laço completo, sai do laço
     }else{
-        printf("Posição incorreta! Digite uma posição valida.\n"); //Se apresentar erro ele repete o laço até uma opção valida
-        } 
+        printf("Posição incorreta! Digite uma posição valida.\n"); 
+        } //Se apresentar erro ele repete o laço até uma opção valida
     }
 
     while(1){
